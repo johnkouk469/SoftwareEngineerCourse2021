@@ -18,11 +18,12 @@ Feature: Search other users/organisations/events
       | phrase                      | related |
       | Age "21"                    | Christos Skapetis |
       | Founded "1999"              | R4A |
-      | Accepting volunteers "yes"  | Greece 2021 Celebration |
-      | Place of Living "Mars"      | None |
-       
+      | Accepting volunteers "yes"  | Greece 2021 Celebration |       
 
-      #compact form. Should we make another scenario for No-result?
+     Scenario: User/organisation searching failed
+     When the search phrase is entered
+     And no result matches
+     Then I should see a message saying "No results"
       
     
     
