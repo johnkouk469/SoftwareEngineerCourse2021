@@ -8,12 +8,12 @@ Feature: Create/manage an event
     When I select the option "Create an event"
     Then a new event is created
     And I am asked to submit event information
-    | Name | Sfhmmy 12|| minium 3 characters|
-    | Place | Online|||
-    | Date | 23-25 of April|||
-    | Special outfit | Pijamas|||
-    | Special Equipment |Internect Access|||
-    | Status |in progress|recruiting OR in progress OR completed| maximum of 1|
+    | Name              | Sfhmmy 12      |                                      | minium 3 characters|
+    | Place             | Online         |                                      ||
+    | Date              | 23-25 of April |                                      ||
+    | Special outfit    | Pijamas        |                                      ||
+    | Special Equipment |Internect Access|                                      ||
+    | Status            |in progress     |recruiting OR in progress OR completed| maximum of 1|
     And I should see a message saying "New event created"
     And I should prompted to this event page
       
@@ -23,12 +23,12 @@ Feature: Create/manage an event
     When I select the option "Edit Event"
     Then I should be allowed to edit information
     And I am asked to submit event information
-    | Name | Sfhmmy 12|| minium 3 characters|
-    | Place | Online|||
-    | Date | 23-25 of April|||
-    | Special outfit | Pijamas|||
-    | Special Equipment |Internect Access|||
-    | Status |in progress|recruiting OR in progress OR completed| maximum of 1|
+    | Name              | Sfhmmy 12      |                                      | minium 3 characters|
+    | Place             | Online         |                                      ||
+    | Date              | 23-25 of April |                                      ||
+    | Special outfit    | Pijamas        |                                      ||
+    | Special Equipment |Internect Access|                                      ||
+    | Status            |in progress     |recruiting OR in progress OR completed| maximum of 1|
     And I should see a message saying "Event successfully edited"
     And I should prompted to this event page
     
