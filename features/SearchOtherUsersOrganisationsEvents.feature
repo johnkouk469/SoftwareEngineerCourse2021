@@ -24,6 +24,7 @@ Feature: Search other users/organisations/events
      When the search phrase is entered
      And no result matches
      Then I should see a message saying "No results"
+     And I should be prompted to the main page
       
     
     
