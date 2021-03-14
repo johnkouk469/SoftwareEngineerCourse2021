@@ -34,23 +34,23 @@ Feature: Manage user/organisation information
     Given I am the organisation    
     When My information is blank
     Then I should be allowed to submit information
-    | Name | 
-    | Founded |
-    | Field |
-    | Accepting Donations |
+    | Name | R4a | minium 3 characters |
+    | Founded | 2021 ||
+    | Field | Software, Robotics ||
+    | Accepting Donations | no ||
     And I should see a message saying "Information successfully submited."
     And I should prompted to my profile page
     When I am the organisation    
     And My information is not blank
     Then I should be allowed to edit information
-    | Name | 
-    | Founded |
-    | Field |
-    | Accepting Donations |
+    | Name | R4a | minium 3 characters |
+    | Founded | 2021 ||
+    | Field | Software, Robotics ||
+    | Accepting Donations | no ||
     And I should see a message saying "Information successfully edited."
     And I should prompted to my profile page
  
-   Scenario: Unsuccesfuly sumbiting/editing user information
+   Scenario: Unsuccesfuly sumbiting/editing user/organisation information
     Given that I am the user or organisation
     When My information violates one or more limitations
     Then I should see a message saying "Invalid Inormation" in #ff0000
