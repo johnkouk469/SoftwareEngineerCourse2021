@@ -6,7 +6,7 @@ Feature: Manage user/organisation information
     Given that I am logged in
     And I want to manage my information
     
-  Scenario: Sumbit/edit information as a user
+  Scenario: Sumbit information as a user
     Given that I am the user
     When My information is blank
     Then I should be allowed to submit information
@@ -17,8 +17,10 @@ Feature: Manage user/organisation information
     | Interests | Fishing, Reading, Environment|||
     | Past Events | Sfhmmy12, TedX AUTh|||
     And I should see a message saying "Information successfully submited."
-    And I should prompted to my profile page
-    When I am the user
+    And I should prompted to my profile page    
+    
+  Scenario: Edit information as a user
+    Given I am the user
     And My information is not blank
     Then I should be allowed to edit information
     | Age  | 21 | maximum of 99 | minimum of 18 |
@@ -30,7 +32,7 @@ Feature: Manage user/organisation information
     And I should see a message saying "Information successfully edited."
     And I should prompted to my profile page
       
-  Scenario: Sumbit/edit information as an organisation
+  Scenario: Sumbit information as an organisation
     Given I am the organisation    
     When My information is blank
     Then I should be allowed to submit information
@@ -40,7 +42,9 @@ Feature: Manage user/organisation information
     | Accepting Donations | no ||
     And I should see a message saying "Information successfully submited."
     And I should prompted to my profile page
-    When I am the organisation    
+    
+  Scenario: Edit information as an organisation
+    Given I am the organisation    
     And My information is not blank
     Then I should be allowed to edit information
     | Name | R4a | minium 3 characters |
